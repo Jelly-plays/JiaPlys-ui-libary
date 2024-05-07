@@ -44,3 +44,17 @@ content.Parent = gui
 tab.MouseButton1Click:Connect(function()
     content3.Visible = true
 end)
+
+-- Create Toggle Button
+local toggleButton = Instance.new("TextButton")
+toggleButton.Size = UDim2.new(0, 100, 0, 50)
+toggleButton.Position = UDim2.new(1, -110, 0, 10) -- Positioned on the right side
+toggleButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+toggleButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+toggleButton.Text = "Toggle Content"
+toggleButton.Parent = gui
+
+-- Toggle Content Visibility when Toggle Button is Clicked
+toggleButton.MouseButton1Click:Connect(function()
+    content3.Visible = not content3.Visible
+end)
