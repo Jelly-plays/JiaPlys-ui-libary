@@ -1,0 +1,46 @@
+-- Create a ScreenGui
+local gui = Instance.new("ScreenGui")
+gui.Parent = game.CoreGui
+
+-- Create a Frame
+local frame = Instance.new("Frame")
+frame.Size = UDim2.new(0, 400, 0, 260) -- Adjusted size to be 400x260
+frame.Position = UDim2.new(0.5, -200, 0.5, -130) -- Centered position with adjusted size
+frame.BackgroundColor3 = Color3.fromRGB(35, 35, 35) -- Dark gray background color
+frame.BorderSizePixel = 0
+frame.Parent = gui
+
+-- Create a Title
+local title = Instance.new("TextLabel")
+title.Size = UDim2.new(1, 0, 0, 30)
+title.Position = UDim2.new(0, 0, 0, 0)
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255) -- White background color
+title.TextColor3 = Color3.fromRGB(0, 0, 0) -- Black text color
+title.Text = "title here"
+title.TextStrokeTransparency = 0.5 -- Adjust the transparency of the text stroke
+title.TextStrokeColor3 = Color3.fromRGB(255, 255, 255) -- Color of the text stroke (white)
+title.Font = Enum.Font.SourceSansBold
+title.TextSize = 20
+title.Parent = frame
+
+-- Create Tab
+local tab = Instance.new("TextButton")
+tab.Size = UDim2.new(0, 100, 0, 50)
+tab.Position = UDim2.new(1, -110, 0, 10) -- Positioned on the right side
+tab.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+tab.TextColor3 = Color3.fromRGB(255, 255, 255)
+tab.Text = "Tab"
+tab.Parent = gui
+
+-- Create Content for Tab
+local content = Instance.new("Frame")
+content.Size = UDim2.new(1, -20, 1, -70)
+content.Position = UDim2.new(0, 10, 0, 70)
+content.BackgroundColor3 = Color3.fromRGB(200, 200, 200)
+content.Visible = false
+content.Parent = gui
+
+-- Toggle Content Visibility when Tab is Clicked
+tab.MouseButton1Click:Connect(function()
+    content3.Visible = true
+end)
